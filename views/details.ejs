@@ -1,0 +1,21 @@
+<%- include('partials/header.ejs'); -%>
+<div class="content">
+    <% let date=b.createdAt.toString().replace( "GMT+0100 (heure normale d’Afrique de l’Ouest)",''); %>
+    <p class="date"><%= date%> </p>
+    <h3 class="title"><%= b.title %> </h3>
+    <p class="snippet"><%= b.snippet %> </p><br>
+    <p class="textbody"><%= b.body %> </p>
+    <a id="delete" class="btn" data-doc="<%= b._id %> ">DELETE</a>
+    
+</div>
+
+<script>
+    const elem=document.getElementById("delete");
+   
+    elem.addEventListener('click',(e)=>{
+        const x=`/blogs/about/${elem.dataset.doc}`;
+        fetch(x,{method:"PATCH"}).then((r)=>r.json()).then((r)=>window.location.href=r.redirect).catch((err)=>console.log(err))
+    })
+</script>
+
+<%- include('./partials/footer'); -%>

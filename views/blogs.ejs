@@ -1,0 +1,19 @@
+<%- include('partials/header'); -%>
+<% if (blog.length>0){ 
+  let reverse=blog.reverse()
+ reverse.forEach((e)=>{ %> 
+<div class="content">
+
+          <a class="single" href="/blogs/about/<%= e._id %>">
+           
+          <h3 class="title"><%= e.title %> </h3>
+          
+          <p class="snippet"><%= e.snippet %> </p>
+          </a>
+        </div>
+  <% }) } %>  
+
+
+
+
+<%- include('partials/footer'); -%>

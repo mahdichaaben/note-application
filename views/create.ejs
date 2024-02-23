@@ -1,0 +1,22 @@
+<%- include('partials/header'); -%>
+<div class="form">
+    <form action="/blogs" method="POST">
+      <label for="title">enter title</label>
+      <input type="text" id="title" name="title">
+      <label for="snippet">snippet</label>
+      <input type="text" id="snippet" name="snippet" required />
+     
+      <label for="blogbody">this blog body</label>
+      <textarea
+        name="body"
+        id="body"
+        cols="30"
+        name="body"
+        rows="10"
+        required
+      ></textarea>
+      <button type="submit">add </button>
+    </form>
+  </div>
+
+<%- include('partials/footer'); -%>

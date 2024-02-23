@@ -1,0 +1,31 @@
+<%- include('partials/header'); -%>
+
+<header>
+  <div class="headings">
+    <h2>WELCOME</h2>
+    <% if (user) { %>
+    <h3><%=user.email%></h3>
+    <%   if(user.blogs.length) {%>
+      <a id="numb" href="/blogs" class="btn" data-numb="<%= user.blogs.length %> "
+        >view blogs</a><% }else{ %>
+      <a id="numb" href="/blogs" class="btn" >view blogs</a
+      ><% }}%>
+    
+    <a href="blogs/create" class="btn">create </a>
+  </div>
+</header>
+<script>
+  const elem=document.getElementById("numb")
+
+      if(elem.dataset.numb>0){
+      elem.classList.add('active');
+
+    }else{
+      elem.classList.remove('active');
+
+    }
+
+  
+</script>
+
+<%- include('partials/footer'); -%>
