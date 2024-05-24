@@ -31,7 +31,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCr
 // routes
 app.get('*',checkuser)
 app.get('/', (req, res) => res.render('home'));
-app.use( signroutes);
+app.use(signroutes);
 app.use('/blogs',requireAuth, blogroutes);
 
 
