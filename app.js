@@ -24,7 +24,7 @@ app.use(urlencoded({ extended: false }));
 // ________________________________________________________________
 
 // database connection
-const dbURI = 'mongodb+srv://blogproject:blogproject123@clustermahdi.oo3haak.mongodb.net/jwt?retryWrites=true&w=majority';
+const dbURI = 'mongodb+srv://blogproject:name@password.oo3haak.mongodb.net/jwt?retryWrites=true&w=majority';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true })
   .then((result) => app.listen(3000))
   .catch((err) => console.log(err)); 
