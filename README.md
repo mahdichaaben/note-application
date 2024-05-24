@@ -10,6 +10,6 @@ User authentication in this application is implemented using JSON Web Tokens (JW
 ## Video Demo
 
 
-[![Simple Notes Application Demo](demo/recording.jpg)](demo/recording.mp4)
+[![Simple Notes Application Demo](demo/recording.jpg)](demo/recording.mkv)
 
 Date of Creation: June/July 2022
